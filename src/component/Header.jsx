@@ -1,6 +1,6 @@
 import React from 'react';
 import '../assets/styles/components/Header.scss';
-import logo from '../assets/static/logo-WikiFate.png';
+import logo from '../assets/static/logo.png';
 import userIcon from '../assets/static/user-icon.png';
 
 const Header=()=>(
@@ -19,4 +19,4 @@ const Header=()=>(
     </header>
 );
 
-export default Header;
+export default Header;  
