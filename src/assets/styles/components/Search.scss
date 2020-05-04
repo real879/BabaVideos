@@ -4,17 +4,18 @@
     justify-content: center;
     flex-direction: column;
     height: 700px;
-    border-radius: 0px 0px 40px 40px;
+    background-color:rgba(0,0,0,0.1);
+    border-radius: 0px 0px 5px 5px;
   }
   
   .main__title {
     color: white;
-    font-size: 25px;
+    font-size: 50px;
   }
   
-  .input {
+  .input__Search{
     background-color: rgba(255,255,255,0.1);
-    border: 2px solid white;
+    border: 4px solid white;
     border-radius: 25px;
     color: white;
     font-family: 'Muli', sans-serif;

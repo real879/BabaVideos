@@ -6,16 +6,18 @@ import Carousel from "../component/Carousel";
 import CarouselItem from "../component/CarouselItem";
 import Footer from "../component/Footer";
 import useInitialState from '../hooks/useInitialState';
+import backgroundSearch from '../assets/static/backgroundSearch.jpg';
+import backgroundOriginals from '../assets/static/backgroundOriginals.jpg';
 import "../assets/styles/App.scss";
 
 const API='http://localhost:3000/InitialState/';
 
-const App = () => {
+
+const Home = () => {
     const initialState=useInitialState(API);    
     return (
-        <div className="App">
-        <Header />
-        <Search />
+        <>
+        <Search bgImg={backgroundSearch}/>
         {initialState.mylist.length>0 && 
 
             <Categories title="Mis Favoritos">
@@ -36,7 +38,7 @@ const App = () => {
         </Categories>
 
        
-        <Categories title="Estrenos">
+        <Categories title="Estrenos" bgImg={backgroundOriginals}>
             <Carousel>
             {initialState.originals.map(item=>
                 <CarouselItem key={item.id}{...item} />
@@ -44,8 +46,7 @@ const App = () => {
          
             </Carousel>
         </Categories>
-        <Footer />
-    </div>
+    </>
   );
 }
-export default App;
+export default Home;
