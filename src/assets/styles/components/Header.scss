@@ -1,6 +1,6 @@
 .header {
     align-items: center;
-    background: #003D79;
+    background: none;
     color: white;
     display: flex;
     height: 100px;
@@ -54,5 +54,7 @@
   .header__menu--profile img {
     margin-right: 8px;
     width: 40px;
+    border-radius:100%;
+    object-fit:cover;
   }
   
